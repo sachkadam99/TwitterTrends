@@ -1,0 +1,14 @@
+<div class="jumbotron">
+    <div class="twitter-container">
+        <p class="header-label">Twitter trends of Dubai</p>
+        <ul class="list-unstyled">
+            <li ng-repeat="trend in trends" class="">
+                <a ui-sref="tweet({trendName: trend.query,trendNameFull : trend.name})" class="twitter-trend">{{trend.name}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <md-button class="md-fab" aria-label="Back to Top" ng-click="scrollToTop()">
+        <md-icon class="glyphicon glyphicon-chevron-up"></md-icon>
+    </md-button>
+</div>

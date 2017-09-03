@@ -1,0 +1,21 @@
+
+<div class="jumbotron">
+    <div class="twitter-container">
+        <p class="header-label">Latest tweets on <span ng-bind-html="trendNameFull"></span></p>
+        <ul class="list-unstyled">
+            <li ng-repeat="tweet in tweets">
+                <div class="profile-container"><img ng-src="{{tweet.user.profile_image_url}}" class="profile-image"></div>
+                <div class="tweet-data">
+                    <p><span class="username">{{tweet.user.name}}</span> <span class="screenname">@{{tweet.user.screen_name}}</span> <span class="created-date">{{tweet.created_at | dateFormat}}</span></p>
+                    <p><span class="tweet-text">{{tweet.text}}</span></p>
+                </div>
+                <br style="clear:both;"/>
+
+            </li>
+        </ul>
+    </div>
+
+    <md-button class="md-fab" aria-label="Back to Top" ng-click="scrollToTop()">
+        <md-icon class="glyphicon glyphicon-chevron-up"></md-icon>
+    </md-button>
+</div>

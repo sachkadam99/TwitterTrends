@@ -1,0 +1,12 @@
+{
+  "name": "TwitterTrends",
+  "main": "app.js",
+  "dependencies": {
+    "twit": "latest",
+    "express": "latest",
+    "nodemon": "latest",
+    "ejs": "latest",
+    "body-parser": "latest",
+    "method-override": "latest"
+  }
+}
