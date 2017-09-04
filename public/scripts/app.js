@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc overview
- * @name shoppingCartApp
+ * @name twitterTrendsApp
  * @description
- * # shoppingCartApp
+ * # twitterTrendsApp
  *
  * Main module of the application.
  */
@@ -20,11 +20,12 @@ angular
     'ui.router',
     'ngMaterial',
     'tweetService',
-    'tweetFactory'
+    'tweetFactory',
+    'AppLoaders'
   ])
   
 
-  .config(function ($stateProvider,$urlRouterProvider) {
+  .config(function ($stateProvider,$urlRouterProvider,$httpProvider) {
     $urlRouterProvider.otherwise('/trends');
 
 
@@ -52,4 +53,7 @@ angular
         }
       }
     })
+
+    //$httpProvider.defaults.withCredentials = true;
+    $httpProvider.interceptors.push('httpInterceptor');
   });

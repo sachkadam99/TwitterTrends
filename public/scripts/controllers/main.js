@@ -2,15 +2,13 @@
 
 /**
  * @ngdoc function
- * @name shoppingCartApp.controller:MainCtrl
+ * @name twitterTrendsApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the shoppingCartApp
+ * Controller of the twitterTrendsApp
  */
 angular.module('twitterTrendsApp')
-  .controller('MainCtrl', function ($rootScope,$scope,$http,tweetService,$window) {
-
-  	//$scope.trends = tweetService.getTrends(); 
+  .controller('MainCtrl', function ($rootScope,$scope,$http,tweetService,$window) { 
 
   	$scope.trends = tweetService.getTrends()
             .then(function (response) {
